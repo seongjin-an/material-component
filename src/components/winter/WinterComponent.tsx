@@ -18,7 +18,8 @@ interface IColor {
 const WinterComponent:React.FC<IProps> = ({imsi,children, sx}) => {
     console.log(typeof sx);
     const [num, setNum] = useState<number>(0);
-    const [theme, setTheme] = useState<Theme>({palette: {primary: {light: "orange", dark: "red"} }})
+    // const [theme, setTheme] = useState<Theme>()
+    const theme: Theme = {palette: {primary: {light: "orange", dark: "red"} }};
     if(typeof sx === 'function'){
         return<Container sx={ sx(theme) }>
             {children}

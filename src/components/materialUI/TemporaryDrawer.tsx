@@ -61,7 +61,14 @@ export default function TemporaryDrawer() {
         <div>
             {['left', 'right', 'top', 'bottom'].map((anchor:any) => (
                 <React.Fragment key={anchor}>
-                    <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                    <Button onClick={toggleDrawer(anchor, true)} sx={(theme) => {
+                        console.log('theme:', theme)
+                        return{
+                            // '&:hover': {
+                            color: 'green',
+                            // },
+                        }
+                    }}>{anchor}</Button>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
