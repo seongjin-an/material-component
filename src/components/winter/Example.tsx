@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import WinterComponent from "./WinterComponent";
+import {Button} from "@mui/material";
 const Compo1 = () => {
     console.log('compo1 render')
     return <WinterComponent sx={{color: 'blue'}} imsi={num => console.log(num)}>
@@ -31,5 +32,9 @@ const Compo2 = () => {
     </WinterComponent>
 }
 export default () => {
-    return <Compo2/>
+    return <>
+        <Compo2/>
+        <h3>hi</h3>
+        <Button>mui</Button>
+    </>
 }
