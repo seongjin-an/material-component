@@ -2,6 +2,7 @@ import React from "react";
 import withSubscription, {InjectedProps} from "./withSubscription";
 import {IComment} from "./CommentList";
 import DataSource from "./DataSource";
+import withSubscript from "./withSubscript";
 interface IProps{
 
 }
@@ -23,7 +24,8 @@ const comments: IComment[] = [
     {id: '111', content: '111'},
     {id: '222', content: '222'}
 ]
-const HOCExample = withSubscription()(AwesomeCommentList, ds => DataSource.getComments())
+// const HOCExample = withSubscription()(AwesomeCommentList, ds => DataSource.getComments())
+const HOCExample = withSubscript()(AwesomeCommentList, ds => DataSource.getComments())
 const HocReal = () => {
     const func = () => console.log('hhhhhhhiiiiiiiiii');
     return(
